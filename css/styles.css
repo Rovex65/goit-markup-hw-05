@@ -341,12 +341,13 @@ img {
 }
 .footer-form-container {
 }
-.footer-title-container {
+.footer-form-title {
   font-weight: 500;
   margin-bottom: 16px;
   color: #ffffff;
 }
 .footer-form {
+  display: flex;
 }
 .footer-form-label {
 }
@@ -359,15 +360,18 @@ img {
   color: #fff;
   margin-right: 24px;
   max-width: 264px;
+  width: 100%;
   height: 40px;
 }
 .footer-form-input::placeholder {
   color: #fff;
   font-size: 12px;
   font-weight: 400;
+  letter-spacing: 0.04em;
 }
 .footer-form-button {
   display: inline-flex;
+  cursor: pointer;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
@@ -378,6 +382,7 @@ img {
   color: #fff;
   font-weight: 500;
   font-size: 16px;
+  letter-spacing: 0.04em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-button:hover,
@@ -442,6 +447,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 24px;
+  max-width: 408px;
 }
 .modal-close-button {
   display: block;
@@ -451,10 +457,26 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 24px;
+  cursor: pointer;
+  background-color: #e7e9fc;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: #404bbf;
+  fill: #fff;
 }
 .modal-close-icon {
 }
 .modal-tittle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 .modal-form {
   display: flex;
@@ -463,14 +485,34 @@ img {
 .modal-label {
   display: flex;
   flex-direction: column;
+  color: #8e8f99;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+.modal-input-container {
   position: relative;
 }
 .modal-input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+  padding: 11px 0 11px 38px;
+  max-width: 360px;
 }
 .modal-input-icon {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   left: 16px;
 }
 .modal-textarea {
+}
+.modal-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
